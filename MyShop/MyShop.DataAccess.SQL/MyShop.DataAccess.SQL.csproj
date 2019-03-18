@@ -53,6 +53,10 @@
     <Compile Include="Migrations\201903062251198_Initial.Designer.cs">
       <DependentUpon>201903062251198_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903181836032_AddBasket.cs" />
+    <Compile Include="Migrations\201903181836032_AddBasket.Designer.cs">
+      <DependentUpon>201903181836032_AddBasket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLRepository.cs" />
@@ -62,15 +66,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201903062251198_Initial.resx">
+      <DependentUpon>201903062251198_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903181836032_AddBasket.resx">
+      <DependentUpon>201903181836032_AddBasket.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\MyShop.Core\MyShop.Core.csproj">
       <Project>{2ee1fd4c-8fea-4ed4-a1ed-65851d957706}</Project>
       <Name>MyShop.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903062251198_Initial.resx">
-      <DependentUpon>201903062251198_Initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
